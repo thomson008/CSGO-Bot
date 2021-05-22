@@ -90,7 +90,7 @@ async def get_steam_data(message):
         response += f'I saved your Steam ID to my database!\n'
    
     stats = prepare_steam_data(steamid, STEAM_API_KEY)
-    response += f'Here are your **CS:GO stats**, {message.author.mention}:\n\n{str(stats)}'
+    response += f'Here are your **CS:GO stats**, {message.author.mention}:\n\n{stats}'
     
     return response
 
