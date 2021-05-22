@@ -82,8 +82,8 @@ async def get_steam_data(message):
         id_provided = False
         while not id_provided:
             msg = await client.wait_for("message")
-            id_provided = validate_id(msg, message)
-            if not id_provided:
+            id_provided = validate_id_message(msg, message)
+            if not id_provided and msg.author != client.user:
                 await message.channel.send('Invalid ID. Please try again.')
         steamid = msg.content
         db[author] = steamid
@@ -98,8 +98,8 @@ async def get_steam_data(message):
 def validate_id(id):
     return re.search('[0-9]{17}', id)
 
-def validate_id_message(msg, message=None):
-    matching_author = not message or message.author == msg.author
+def validate_id_message(msg, message):
+    matching_author = message.author == msg.author
     return validate_id(msg.content) and matching_author
 
 
