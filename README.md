@@ -25,3 +25,6 @@ Having the bot added to your Discord server, you can run the following commands 
 
 ```$setid STEAM_ID``` - will store your Steam ID (specified as "STEAM_ID") in a database. It will be used to retrieve your statistics when running the `$stats` command
 
+### Usage
+To add the bot to your Discord channel, simply follow [this link](https://discord.com/api/oauth2/authorize?client_id=845198409676881930&permissions=2148002880&scope=bot).
+Once you are logged in to Discord, it will ask you to choose the server where you want to add the bot. Choose your server and just follow the instructions on the screen.
