@@ -28,3 +28,22 @@ Having the bot added to your Discord server, you can run the following commands 
 ### Usage
 To add the bot to your Discord channel, simply follow [this link](https://discord.com/api/oauth2/authorize?client_id=845198409676881930&permissions=2148002880&scope=bot).
 Once you are logged in to Discord, it will ask you to choose the server where you want to add the bot. Choose your server and just follow the instructions on the screen.
+
+### Examples
+Below are some screenshots from a Discord chat including the CSGO bot (aka Bro Bot).
+
+
+* Player statistics</p>
+<img src="./examples/stats.png" alt="MarineGEO circle logo" style="height: 200px"/>
+
+* Encouraging message</p>
+<img src="./examples/enc.png" alt="MarineGEO circle logo" style="height: 100px"/>
+
+* List of saved messages</p>
+<img src="./examples/list.png" alt="MarineGEO circle logo" style="height: 200px"/>
+
+* Inspiring quote</p>
+<img src="./examples/inspire.png" alt="MarineGEO circle logo" style="height: 100px"/>
+
+* Setting a Steam ID</p>
+<img src="./examples/setid.png" alt="MarineGEO circle logo" style="height: 200px"/>
