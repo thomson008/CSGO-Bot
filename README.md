@@ -34,16 +34,16 @@ Below are some screenshots from a Discord chat including the CSGO bot (aka Bro B
 
 
 * Player statistics</p>
-<img src="./examples/stats.png" alt="MarineGEO circle logo" style="height: 200px"/>
+<img src="./examples/stats.PNG" alt="Statistics" style="height: 200px"/>
 
 * Encouraging message</p>
-<img src="./examples/enc.png" alt="MarineGEO circle logo" style="height: 100px"/>
+<img src="./examples/enc.PNG" alt="Encouragements" style="height: 100px"/>
 
 * List of saved messages</p>
-<img src="./examples/list.png" alt="MarineGEO circle logo" style="height: 200px"/>
+<img src="./examples/list.PNG" alt="Saved messages" style="height: 200px"/>
 
 * Inspiring quote</p>
-<img src="./examples/inspire.png" alt="MarineGEO circle logo" style="height: 100px"/>
+<img src="./examples/inspire.PNG" alt="Quote" style="height: 100px"/>
 
 * Setting a Steam ID</p>
-<img src="./examples/setid.png" alt="MarineGEO circle logo" style="height: 200px"/>
+<img src="./examples/setid.PNG" alt="Steam ID" style="height: 200px"/>
