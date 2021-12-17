@@ -1,6 +1,7 @@
 from steam import webapi
 from replit import db
 import re
+import datetime
 
 APPID = '730'
 
@@ -23,7 +24,11 @@ def prepare_steam_data(steamid, STEAM_API_KEY):
     final_stats = ''
 
     for i, stat in enumerate(stats):
-        final_stats += f"{emojis[i]} {' '.join(stat['name'].split('_')[1:])}: {stat['value']}\n"
+        value = stat['value']
+        if stat['name'] == 'total_time_played':
+            value = str(datetime.timedelta(seconds=value))
+
+        final_stats += f"{emojis[i]} {' '.join(stat['name'].split('_')[1:])}: {value}\n"
 
     return final_stats
 

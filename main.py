@@ -6,15 +6,9 @@ import random
 from replit import db
 from keep_alive import keep_alive
 from steam_util import get_steam_data, set_new_id
+from sentiment import is_negative
 
 client = discord.Client()
-
-# List of keywords used for detecting "sad" messages
-sad_words = [
-    'kurde', 'słabo', 'badziewie', 'lipa', 'fatalnie', 
-    'shit', 'sad', 'rip', 'dupa', 'ała', 'zginąłem', 'stupid', 
-    'debil', 'retard', 'i died', 'they killed', 'crying'
-]
 
 # Basic encouraging messages that the bot will send
 starter_encouragements = [
@@ -128,8 +122,10 @@ async def check_for_sad_words(message, msg):
         if 'encouragements' in db.keys():
             options += db['encouragements']
 
-        if any(word in msg for word in sad_words):
+        if is_negative(msg):
             await message.channel.send(random.choice(options))
+        elif 'yee' in msg:
+            await message.channel.send('<:yee:894630695106908160>')
 
 
 async def run_potential_command(message, msg):
