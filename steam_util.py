@@ -27,6 +27,8 @@ def prepare_steam_data(steamid, STEAM_API_KEY):
         value = stat['value']
         if stat['name'] == 'total_time_played':
             value = str(datetime.timedelta(seconds=value))
+        else:
+            value = f'{value:,}'
 
         final_stats += f"{emojis[i]} {' '.join(stat['name'].split('_')[1:])}: {value}\n"
 
@@ -44,17 +46,8 @@ async def get_steam_data(client, message, STEAM_API_KEY):
     if author in db.keys():
         steamid = db[author]
     else:
-        await message.channel.send('I don\'t know your Steam ID. Please send it.')
-        id_provided = False
-        while not id_provided:
-            msg = await client.wait_for("message")
-            id_provided = validate_id_message(msg, message)
-            if not id_provided and msg.author != client.user:
-                await message.channel.send('Invalid ID. Please try again.')
-        steamid = msg.content
-        db[author] = steamid
-        response += f'I saved your Steam ID to my database!\n'
-   
+        return 'I don\'t know your Steam ID. Please set it using the $setid command.'
+
     stats = prepare_steam_data(steamid, STEAM_API_KEY)
     response += f'Here are your **CS:GO stats**, {message.author.mention}:\n\n{stats}'
     
